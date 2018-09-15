@@ -27,27 +27,69 @@ a {
 }
 .Hero-title {
   margin: 0;
-  color: white;
+  color: #fff;
   font-size: 60px;
   line-height: 1.2;
   text-shadow: -3px 1px 5px #191a1b;
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .Hero-subtitle {
   font-size: 30px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+  color: #0a0a0a;
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .Hero-btn {
   font-size: 17px;
   font-weight: 600;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.7);
   padding: 9px 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  transition: all 0.5s ease-in-out;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .Hero-btn:hover {
   background: #191a1b;
+}
+.Hero-image-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+@media (max-width: 640px) {
+  .HeroGroup {
+    padding: 100px 20px;
+  }
+
+  .Hero h1 {
+    font-size: 40px;
+  }
+
+  .Hero p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
