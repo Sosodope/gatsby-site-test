@@ -3,6 +3,12 @@
   width: 100%;
   padding: 50px 0;
   z-index: 100;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.HeaderScrolled {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  backdrop-filter: blur(20px);
 }
 .HeaderGroup {
   max-width: 800px;
@@ -16,6 +22,9 @@
 .Header a {
   color: #000;
   font-weight: 700;
+}
+.HeaderScrolled a {
+  color: #fff;
 }
 .Header-btn {
   padding: 8px 20px;
