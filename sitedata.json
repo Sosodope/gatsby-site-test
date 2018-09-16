@@ -1,0 +1,20 @@
+{
+  "cells": [
+    {
+      "title": "Individual",
+      "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+    },
+    {
+      "title": "Team less than 5",
+      "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+    },
+    {
+      "title": "Team less than 15",
+      "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+    },
+    {
+      "title": "Team more than 30",
+      "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
+    }
+  ]
+}

@@ -1,8 +1,32 @@
 import React from "react";
 import Link from "gatsby-link";
-import Card from "../components/card";
+import Card from "../components/Card";
+import Cell from "../components/Cell";
 import Section from "../components/Section";
 import Wave from "../components/Wave";
+import siteData from "../../sitedata.json";
+import styled from "styled-components";
+
+const SectionCaption = styled.p`
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #94a4ba;
+  text-align: center;
+`;
+
+const SectionCellGroup = styled.div`
+  max-width: 800px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
 
 const IndexPage = () => (
   <div>
@@ -49,6 +73,13 @@ const IndexPage = () => (
       title="About Us"
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate esse enim necessitatibus. Unde, optio facere porro perspiciatis rerum nesciunt molestiae, veritatis modi ipsum dolor alias debitis, deserunt reiciendis minus nulla!"
     />
+
+    <SectionCaption>Pricing Plan</SectionCaption>
+    <SectionCellGroup>
+      {siteData.cells.map(cell => (
+        <Cell title={cell.title} image={cell.image} />
+      ))}
+    </SectionCellGroup>
   </div>
 );
 
