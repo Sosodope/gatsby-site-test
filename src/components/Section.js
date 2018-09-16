@@ -39,6 +39,8 @@ const SectionTitle = styled.h3`
   font-size: 60px;
   margin: 0;
   line-height: 1.2;
+  background-color: #f9d609;
+  padding: 15px;
 
   @media (max-width: 720px) {
     font-size: 40px;
@@ -47,6 +49,8 @@ const SectionTitle = styled.h3`
 
 const SectionText = styled.p`
   color: #fff;
+  background-color: #f9d609;
+  padding: 15px;
 `;
 
 const WaveBottom = styled.div`
